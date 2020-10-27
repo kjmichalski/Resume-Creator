@@ -1,0 +1,136 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red127\green0\blue85;\red0\green0\blue192;\red63\green127\blue95;
+\red42\green0\blue255;\red106\green62\blue62;}
+{\*\expandedcolortbl;;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c0\c0\c75294;\csgenericrgb\c24706\c49804\c37255;
+\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c41569\c24314\c24314;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 class
+\f1\b0 \cf0  Resume \
+\{\
+	String \cf3 firstName\cf0 ;\
+	String \cf3 lastName\cf0 ; \
+	String \cf3 jobTitle\cf0 ;\
+	\cf4 //String educationTitle;\cf0 \
+	String \cf3 gradYearHS\cf0 ;\
+	String \cf3 gradYearCollege\cf0 ;\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  Resume ()\
+	\{\
+		\cf3 firstName\cf0  = \cf5 "Katherine"\cf0 ;\
+		\cf3 lastName\cf0  = \cf5 "Michalski"\cf0 ;\
+		\cf3 jobTitle\cf0  = \cf5 "Software Developer"\cf0 ;\
+		\cf4 //educationTitle = "University of \ul Iowa\ulnone ";\cf0 \
+		\cf3 gradYearHS\cf0  = \cf5 "2019"\cf0 ;\
+		\cf3 gradYearCollege\cf0  = \cf5 "0"\cf0 ;\
+				 \
+	\}\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  Resume (String \cf6 fname\cf0 , String \cf6 lname\cf0 , String \cf6 job\cf0 , String \cf6 gradHS\cf0 , String \cf6 gradCollege\cf0 )\
+	\{\
+		\cf3 firstName\cf0  = \cf6 fname\cf0 ; \
+		\cf3 lastName\cf0  = \cf6 lname\cf0 ;\
+		\cf3 jobTitle\cf0  = \cf6 job\cf0 ;\
+		\cf3 gradYearHS\cf0  = \cf6 gradHS\cf0 ;\
+		\cf3 gradYearCollege\cf0  = \cf6 gradCollege\cf0 ;\
+	\}\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  String getfullName()\
+	\{\
+		
+\f0\b \cf2 return
+\f1\b0 \cf0  \cf3 firstName\cf0  + \cf5 " "\cf0  + \cf3 lastName\cf0 ;\
+	\}\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  String getGradYearHS()\
+	\{\
+		
+\f0\b \cf2 return
+\f1\b0 \cf0  \cf3 gradYearHS\cf0 ;\
+	\}\
+	\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  String getGradYearCollege()\
+	\{\
+		
+\f0\b \cf2 return
+\f1\b0 \cf0  \cf3 gradYearCollege\cf0 ;\
+	\}\
+	\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 boolean
+\f1\b0 \cf0  hasCollegeDegree ()\
+	\{\
+		
+\f0\b \cf2 if
+\f1\b0 \cf0  (\cf3 gradYearCollege\cf0  == \cf5 "0"\cf0 )\
+			
+\f0\b \cf2 return
+\f1\b0 \cf0  
+\f0\b \cf2 false
+\f1\b0 \cf0 ;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			
+\f0\b \cf2 return
+\f1\b0 \cf0  
+\f0\b \cf2 true
+\f1\b0 \cf0 ;\
+	\}\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  String getJobTitle()\
+	\{\
+		
+\f0\b \cf2 return
+\f1\b0 \cf0  \cf3 jobTitle\cf0 ;\
+	\}\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 void
+\f1\b0 \cf0  setGradYearHS(String \cf6 hs\cf0 )\
+	\{\
+		\cf3 gradYearHS\cf0  = \cf6 hs\cf0 ;\
+	\}\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 void
+\f1\b0 \cf0  setGradYearCollege(String \cf6 college\cf0 )\
+	\{\
+		\cf3 gradYearCollege\cf0  = \cf6 college\cf0 ;\
+	\}\
+	\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  String toString()\
+	\{\
+		
+\f0\b \cf2 return
+\f1\b0 \cf0  \cf3 firstName\cf0  + \cf5 " "\cf0  + \cf3 lastName\cf0  + \cf5 "\\n"\cf0  + \cf3 jobTitle\cf0  + \cf5 "\\n"\cf0  + \cf5 "\\nHigh School Grad Year: "\cf0  + \cf3 gradYearHS\cf0  + \cf5 "\\nCollege Grad Year: "\cf0  + \cf3 gradYearCollege\cf0 ;\
+	\}\
+\}\
+}

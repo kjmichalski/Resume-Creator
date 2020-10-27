@@ -1,0 +1,283 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-BoldItalic;
+}
+{\colortbl;\red255\green255\blue255;\red127\green0\blue85;\red0\green0\blue192;\red42\green0\blue255;
+\red100\green100\blue100;\red63\green127\blue95;\red127\green159\blue191;\red106\green62\blue62;}
+{\*\expandedcolortbl;;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c0\c0\c75294;\csgenericrgb\c16471\c0\c100000;
+\csgenericrgb\c39216\c39216\c39216;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c49804\c62353\c74902;\csgenericrgb\c41569\c24314\c24314;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf2 import
+\f1\b0 \cf0  java.util.*;\
+
+\f0\b \cf2 import
+\f1\b0 \cf0  java.applet.Applet;\
+
+\f0\b \cf2 import
+\f1\b0 \cf0  java.awt.*;\
+\
+
+\f0\b \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 class
+\f1\b0 \cf0  ResumeDriver 
+\f0\b \cf2 extends
+\f1\b0 \cf0  Applet \{\
+	
+\f0\b \cf2 boolean
+\f1\b0 \cf0  \cf3 run\cf0 ;\
+	String \cf3 fname\cf0 , \cf3 lname\cf0 , \cf3 job\cf0 ;\
+	String \cf3 hsGrad\cf0 , \cf3 collegeGrad\cf0 ;\
+	String \cf3 hs\cf0 , \cf3 college\cf0 , \cf3 type\cf0 , \cf3 major\cf0 , \cf3 moreInfo\cf0 , \cf3 lang\cf0  = \cf4 ""\cf0 ;\
+	Resume \cf3 user\cf0  = 
+\f0\b \cf2 null
+\f1\b0 \cf0 ;\
+	Education \cf3 ed\cf0  = 
+\f0\b \cf2 null
+\f1\b0 \cf0 ;\
+	PreviousJob[] \cf3 jobs\cf0  = 
+\f0\b \cf2 null
+\f1\b0 \cf0 ;\
+\
+	\cf5 @Override\cf0 \
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 void
+\f1\b0 \cf0  start() \{\
+		\cf6 // 
+\f0\b \cf7 TODO
+\f1\b0 \cf6  Auto-generated method stub\cf0 \
+		
+\f0\b \cf2 super
+\f1\b0 \cf0 .start();\
+		Scanner \cf8 reader\cf0  = 
+\f0\b \cf2 new
+\f1\b0 \cf0  Scanner(System.
+\f2\i\b \cf3 in
+\f1\i0\b0 \cf0 );\
+\
+		\cf6 // Resume user = new Resume();\cf0 \
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is your first name?: "\cf0 );\
+		\cf3 fname\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is your surname?: "\cf0 );\
+		\cf3 lname\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is your job title?: "\cf0 );\
+		\cf3 job\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What year did you graduate high school? (format YYYY): "\cf0 );\
+		\cf3 hsGrad\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What year did you graduate college?: "\cf0 );\
+		\cf3 collegeGrad\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		\cf3 user\cf0  = 
+\f0\b \cf2 new
+\f1\b0 \cf0  Resume(\cf3 fname\cf0 , \cf3 lname\cf0 , \cf3 job\cf0 , \cf3 hsGrad\cf0 , \cf3 collegeGrad\cf0 );\
+		\cf6 // System.out.print(user);\cf0 \
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is the name of your high school?: "\cf0 );\
+		\cf3 hs\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is the name of your college?: "\cf0 );\
+		\cf3 college\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What type of degree do you have? (i.e. BA, MS, PhD, etc.): "\cf0 );\
+		\cf3 type\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is the title of your college major?: "\cf0 );\
+		\cf3 major\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .println(\cf4 "Are you proficient in other languages (i.e. Spanish, ASL, C++, etc.)"\cf0 );\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "Please enter 1 for yes and 2 for no: "\cf0 );\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf8 yesOrNo\cf0  = \cf8 reader\cf0 .nextInt();\
+\
+		
+\f0\b \cf2 if
+\f1\b0 \cf0  (\cf8 yesOrNo\cf0  == 1) \{\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 ""\cf0 );\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is/are the languages you are proficient in (if >1, seperate with commas): "\cf0 );\
+			\cf8 reader\cf0 .nextLine();\
+			\cf3 lang\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+		\}\
+		\
+\
+		\cf3 ed\cf0  = 
+\f0\b \cf2 new
+\f1\b0 \cf0  Education(\cf3 hs\cf0 , \cf3 college\cf0 , \cf3 type\cf0 , \cf3 major\cf0 , \cf3 lang\cf0 );\
+\
+		System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .println(\cf4 "How many jobs have you had before? (Must be > 0) "\cf0 );\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf8 exp\cf0  = \cf8 reader\cf0 .nextInt();\
+\
+		
+\f0\b \cf2 while
+\f1\b0 \cf0  (\cf8 exp\cf0  < 0) \{\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "Try again. How many jobs have you had before? "\cf0 );\
+			\cf8 exp\cf0  = \cf8 reader\cf0 .nextInt();\
+		\}\
+\
+		\cf3 jobs\cf0  = 
+\f0\b \cf2 new
+\f1\b0 \cf0  PreviousJob[\cf8 exp\cf0 ];\
+\
+		
+\f0\b \cf2 for
+\f1\b0 \cf0  (
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf8 i\cf0  = 0; \cf8 i\cf0  < \cf3 jobs\cf0 .\cf3 length\cf0 ; \cf8 i\cf0 ++) \{\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .println(\cf4 "---------------"\cf0 );\
+			
+\f0\b \cf2 if
+\f1\b0 \cf0  (\cf8 i\cf0  == 0)\
+				\cf8 reader\cf0 .nextLine();\
+			
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+				System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 ""\cf0 );\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .println(\cf4 "What is the name of this job?: "\cf0 );\
+			String \cf8 jobName\cf0  = \cf8 reader\cf0 .nextLine();\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What year did you start working?: "\cf0 );\
+			String \cf8 start\cf0  = \cf8 reader\cf0 .nextLine();\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What year did you finish?: "\cf0 );\
+			String \cf8 end\cf0  = \cf8 reader\cf0 .nextLine();\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What was the name of your employer?: "\cf0 );\
+			String \cf8 employer\cf0  = \cf8 reader\cf0 .nextLine();\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is one thing that you accomplished at your job?: "\cf0 );\
+			String \cf8 one\cf0  = \cf8 reader\cf0 .nextLine();\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is a second thing that you accomplished at your job?: "\cf0 );\
+			String \cf8 two\cf0  = \cf8 reader\cf0 .nextLine();\
+			System.
+\f2\i\b \cf3 out
+\f1\i0\b0 \cf0 .print(\cf4 "What is a third thing that you accomplished at your job?: "\cf0 );\
+			String \cf8 three\cf0  = \cf8 reader\cf0 .nextLine();\
+\
+			\cf3 jobs\cf0 [\cf8 i\cf0 ] = 
+\f0\b \cf2 new
+\f1\b0 \cf0  PreviousJob(\cf8 start\cf0 , \cf8 end\cf0 , \cf8 employer\cf0 , \cf8 jobName\cf0 , \cf8 one\cf0 , \cf8 two\cf0 , \cf8 three\cf0 );\
+		\}\
+	\}\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 void
+\f1\b0 \cf0  paint(Graphics \cf8 page\cf0 )\
+	\cf6 // public static void main(String[] \ul args\ulnone )\cf0 \
+	\{\
+		Font \cf8 bigger\cf0  = 
+\f0\b \cf2 new
+\f1\b0 \cf0  Font(\cf4 "Times New Roman"\cf0 , 1, 20);\
+		Font \cf8 smaller\cf0  = 
+\f0\b \cf2 new
+\f1\b0 \cf0  Font(\cf4 "Times New Roman"\cf0 , 1, 12);\
+		Font \cf8 normal\cf0  = 
+\f0\b \cf2 new
+\f1\b0 \cf0  Font(\cf4 "Times New Roman"\cf0 , 1, 16);\
+\
+		\cf8 page\cf0 .setFont(\cf8 bigger\cf0 );\
+		Dimension \cf8 d\cf0  = getSize();\
+		\cf8 page\cf0 .drawString(\cf3 user\cf0 .\cf3 firstName\cf0  + \cf4 " "\cf0  + \cf3 user\cf0 .\cf3 lastName\cf0 , (\cf8 d\cf0 .\cf3 width\cf0 /2), 20);\
+\
+		\cf8 page\cf0 .drawLine(10, 30, \cf8 d\cf0 .\cf3 width\cf0 , 30);\
+		\cf8 page\cf0 .drawString(\cf3 user\cf0 .getJobTitle(), \cf8 d\cf0 .\cf3 width\cf0 /2, 50);\
+		\cf8 page\cf0 .setFont(\cf8 smaller\cf0 );\
+		\cf6 // page.drawString(user.getGradYearHS() + " - " + user.getGradYearCollege(), 10,\cf0 \
+		\cf6 // 50);\cf0 \
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf8 y\cf0  = 70;\
+\
+		\cf6 // page.drawString(jobs[0], x, y);\cf0 \
+\
+		
+\f0\b \cf2 for
+\f1\b0 \cf0  (
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf8 i\cf0  = 0; \cf8 i\cf0  < \cf3 jobs\cf0 .\cf3 length\cf0 ; \cf8 i\cf0 ++)\
+		\{\
+			\cf8 page\cf0 .setFont(\cf8 normal\cf0 );\
+			\cf8 page\cf0 .drawString(\cf3 jobs\cf0 [\cf8 i\cf0 ].getTitle() + \cf4 " at "\cf0  + \cf3 jobs\cf0 [\cf8 i\cf0 ].getEmployerName(), 10, \cf8 y\cf0 );\
+			\cf8 y\cf0  += 15;\
+			\cf8 page\cf0 .setFont(\cf8 smaller\cf0 );\
+			\cf8 page\cf0 .drawString(\cf3 jobs\cf0 [\cf8 i\cf0 ].getYears(), 10, \cf8 y\cf0 );\
+			\cf8 y\cf0  += 15;\
+			\cf8 page\cf0 .drawString(\cf4 "- "\cf0  + \cf3 jobs\cf0 [\cf8 i\cf0 ].getBulletOne(), 10, \cf8 y\cf0 );\
+			\cf8 y\cf0  += 10;\
+			\cf8 page\cf0 .drawString(\cf4 "- "\cf0  + \cf3 jobs\cf0 [\cf8 i\cf0 ].getBulletTwo(), 10, \cf8 y\cf0 );\
+			\cf8 y\cf0  += 10;\
+			\cf8 page\cf0 .drawString(\cf4 "- "\cf0  + \cf3 jobs\cf0 [\cf8 i\cf0 ].getBulletThree(), 10, \cf8 y\cf0 );\
+			\cf8 y\cf0  += 30;\
+\
+		\}\
+\
+		\cf8 page\cf0 .setFont(\cf8 normal\cf0 );\
+		\cf8 page\cf0 .drawString(\cf4 "Education & Other Skills"\cf0 , 10, \cf8 y\cf0 );\
+		\cf8 y\cf0  += 20;\
+		\cf8 page\cf0 .setFont(\cf8 smaller\cf0 );\
+		\cf8 page\cf0 .drawString(\cf3 ed\cf0 .getHS(\cf3 user\cf0 ), 10, \cf8 y\cf0 );\
+		\cf8 y\cf0  += 10;\
+		\cf8 page\cf0 .drawString(\cf3 ed\cf0 .getCollege(\cf3 user\cf0 ), 10, \cf8 y\cf0 );\
+		\cf8 y\cf0  += 10;\
+		\cf8 page\cf0 .drawString(\cf3 ed\cf0 .getDegree(), 10, \cf8 y\cf0 );\
+		\cf8 y\cf0  += 10;\
+		\cf8 page\cf0 .drawString(\cf3 ed\cf0 .getLanguage(), 10, \cf8 y\cf0 );\
+		\
+	\}\
+\}\
+\
+}

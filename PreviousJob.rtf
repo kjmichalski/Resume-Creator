@@ -1,0 +1,134 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red63\green127\blue95;\red127\green0\blue85;\red0\green0\blue192;
+\red42\green0\blue255;\red106\green62\blue62;}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c0\c0\c75294;
+\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c41569\c24314\c24314;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 // Class intended to create PreviousJob object that can hold the information for each job\cf0 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf3 public
+\f0\b0 \cf0  
+\f1\b \cf3 class
+\f0\b0 \cf0  PreviousJob 
+\f1\b \cf3 extends
+\f0\b0 \cf0  Resume\
+\{\
+	String \cf4 yearStarted\cf0 ;\
+	String \cf4 yearEnded\cf0 ;\
+	String \cf4 employerName\cf0 ;\
+	\cf2 //String address;\cf0 \
+	String \cf4 title\cf0 ;\
+	String \cf4 bulletOne\cf0 ;\
+	String \cf4 bulletTwo\cf0 ;\
+	String \cf4 bulletThree\cf0 ;\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  PreviousJob ()\
+	\{\
+		\cf4 yearStarted\cf0  = \cf5 "2014"\cf0 ;\
+		\cf4 yearEnded\cf0  = \cf5 "2018"\cf0 ;\
+		\cf4 employerName\cf0  = \cf5 "Mercy Medical Center"\cf0 ;\
+		\cf4 title\cf0  = \cf5 "Receptionist"\cf0 ;\
+		\cf4 bulletOne\cf0  = \cf5 "Scheduled appointments using Mercy's Scheduling Software"\cf0 ;\
+		\cf4 bulletTwo\cf0  = \cf5 "Coordinated with co-workers"\cf0 ;\
+		\cf4 bulletThree\cf0  = \cf5 "Assisted Spanish-speaking paitients"\cf0 ;\
+	\}\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  PreviousJob (String \cf6 start\cf0 , String \cf6 end\cf0 , String \cf6 employer\cf0 , String \cf6 jobName\cf0 , String \cf6 one\cf0 , String \cf6 two\cf0 , String \cf6 three\cf0 )\
+	\{\
+	\
+		\cf4 yearStarted\cf0  = \cf6 start\cf0 ;\
+		\cf4 yearEnded\cf0  = \cf6 end\cf0 ;\
+		\cf4 employerName\cf0  = \cf6 employer\cf0 ;\
+		\cf4 title\cf0  = \cf6 jobName\cf0 ;\
+		\cf4 bulletOne\cf0  = \cf6 one\cf0 ;\
+		\cf4 bulletTwo\cf0  = \cf6 two\cf0 ;\
+		\cf4 bulletThree\cf0  = \cf6 three\cf0 ;\
+		\
+	\}\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  String getTitle()\
+	\{\
+		
+\f1\b \cf3 return
+\f0\b0 \cf0  \cf4 title\cf0 ;\
+	\}\
+	\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  String getYears()\
+	\{\
+		
+\f1\b \cf3 return
+\f0\b0 \cf0  \cf4 yearStarted\cf0  + \cf5 " - "\cf0  + \cf4 yearEnded\cf0 ;\
+	\}\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  String getEmployerName ()\
+	\{\
+		
+\f1\b \cf3 return
+\f0\b0 \cf0  \cf4 employerName\cf0 ;\
+	\}\
+\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  String getBulletOne()\
+	\{\
+		
+\f1\b \cf3 return
+\f0\b0 \cf0  \cf4 bulletOne\cf0 ;\
+	\}\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  String getBulletTwo()\
+	\{\
+		
+\f1\b \cf3 return
+\f0\b0 \cf0  \cf4 bulletTwo\cf0 ;\
+	\}\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  String getBulletThree()\
+	\{\
+		
+\f1\b \cf3 return
+\f0\b0 \cf0  \cf4 bulletThree\cf0 ;\
+	\}\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  String getBulletPoints()\
+	\{\
+		
+\f1\b \cf3 return
+\f0\b0 \cf0  \cf5 "- "\cf0  + \cf4 bulletOne\cf0  + \cf5 "\\n- "\cf0  + \cf4 bulletTwo\cf0  + \cf5 "\\n- "\cf0  + \cf4 bulletThree\cf0 ;\
+	\}\
+	\
+	
+\f1\b \cf3 public
+\f0\b0 \cf0  String toString()\
+	\{\
+		
+\f1\b \cf3 return
+\f0\b0 \cf0  \cf4 jobTitle\cf0  + \cf5 " at "\cf0  + \cf4 employerName\cf0  + \cf5 "\\n"\cf0 + \cf4 yearStarted\cf0  + \cf5 " - "\cf0  + \cf4 yearEnded\cf0  + \cf5 "\\n"\cf0  + getBulletPoints();\
+	\}\
+\}\
+}
